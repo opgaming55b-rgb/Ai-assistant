@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Store — India's Premium AI Assistant Store</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== LOADER ===== -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-text">AI Store</div>
+    </div>
+
+    <!-- ===== CURSOR GLOW ===== -->
+    <div id="cursor-glow"></div>
+
+    <!-- ===== PARTICLES CANVAS ===== -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="#" class="nav-logo" aria-label="AI Store Home">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="12" y="18" width="40" height="28" rx="8" stroke="url(#logoGrad)" stroke-width="2.5" />
+                    <circle cx="24" cy="30" r="4" fill="url(#logoGrad)" />
+                    <circle cx="40" cy="30" r="4" fill="url(#logoGrad)" />
+                    <rect x="20" y="38" width="24" height="6" rx="3" fill="url(#logoGrad)" />
+                    <rect x="28" y="46" width="8" height="10" rx="3" fill="url(#logoGrad)" />
+                    <circle cx="32" cy="12" r="5" stroke="url(#logoGrad)" stroke-width="2" />
+                    <path d="M32 17v4M32 25v2M28 21l-4 4M36 21l4 4" stroke="url(#logoGrad)" stroke-width="1.5" stroke-linecap="round" />
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0" y1="0" x2="64" y2="64">
+                            <stop offset="0%" stop-color="#00d4ff" />
+                            <stop offset="100%" stop-color="#7b2ffc" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>AI Store</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks" role="menubar">
+                <li role="none"><a href="#home" role="menuitem" class="active">Home</a></li>
+                <li role="none"><a href="#apps" role="menuitem">Apps</a></li>
+                <li role="none"><a href="#features" role="menuitem">Features</a></li>
+                <li role="none"><a href="#order" role="menuitem">Buy</a></li>
+                <li role="none"><a href="#support" role="menuitem">Support</a></li>
+                <li role="none"><a href="#faq" role="menuitem">FAQ</a></li>
+                <li role="none"><a href="#privacy" role="menuitem">Privacy</a></li>
+                <li role="none"><a href="#terms" role="menuitem">Terms</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark/light mode">🌙</button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content reveal">
+                <h1>India's Premium AI Assistant Store</h1>
+                <p>Buy Lifetime Premium AI Assistants with Instant Support — powered by next-gen intelligence.</p>
+                <div class="hero-buttons">
+                    <a href="#apps" class="btn btn-primary btn-glow">🚀 View Apps</a>
+                    <a href="#support" class="btn btn-secondary">💬 Customer Support</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="glass-sphere">🧠</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== APPS ===== -->
+    <section class="section" id="apps">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Premium AI Assistants & Combos</h2>
+                <p>Choose your lifetime companion — Single or Combo, built for speed, intelligence, and reliability.</p>
+            </div>
+            <div class="apps-grid">
+                <div class="app-card reveal">
+                    <div class="icon">🤖</div>
+                    <h3>Zara Assistant</h3>
+                    <div class="price">₹699</div>
+                    <div class="validity">✅ Lifetime Validity</div>
+                    <ul class="features"><li>AI Chat</li><li>Voice Assistant</li><li>Fast Response</li><li>Premium Access</li></ul>
+                    <a href="#order" class="btn btn-primary buy-btn" data-app="Zara Assistant" data-price="₹699">Buy Now →</a>
+                </div>
+                <div class="app-card reveal">
+                    <div class="icon">⚡</div>
+                    <h3>MAX Assistant</h3>
+                    <div class="price">₹599</div>
+                    <div class="validity">✅ Lifetime Validity</div>
+                    <ul class="features"><li>GPT AI</li><li>Image AI</li><li>Voice AI</li><li>Premium Features</li></ul>
+                    <a href="#order" class="btn btn-primary buy-btn" data-app="MAX Assistant" data-price="₹599">Buy Now →</a>
+                </div>
+                <div class="app-card reveal">
+                    <div class="icon">🧩</div>
+                    <h3>Jarvis Assistant</h3>
+                    <div class="price">₹399</div>
+                    <div class="validity">✅ Lifetime Validity</div>
+                    <ul class="features"><li>Personal Assistant</li><li>Voice Commands</li><li>Smart AI</li><li>Premium Access</li></ul>
+                    <a href="#order" class="btn btn-primary buy-btn" data-app="Jarvis Assistant" data-price="₹399">Buy Now →</a>
+                </div>
+                <div class="app-card reveal">
+                    <span class="combo-badge">🔥 Combo</span>
+                    <div class="icon">🤖⚡</div>
+                    <h3>Zara + MAX</h3>
+                    <div class="price">₹1,099</div>
+                    <div class="validity">✅ Lifetime Validity</div>
+                    <ul class="features"><li>Zara AI + MAX AI</li><li>Dual Assistant Power</li><li>Full Phone Control</li><li>Lifetime Access</li></ul>
+                    <a href="#order" class="btn btn-primary buy-btn" data-app="Zara + MAX" data-price="₹1,099">Buy Now →</a>
+                </div>
+                <div class="app-card reveal">
+                    <span class="combo-badge">🔥 Combo</span>
+                    <div class="icon">⚡🧩</div>
+                    <h3>MAX + Jarvis</h3>
+                    <div class="price">₹899</div>
+                    <div class="validity">✅ Lifetime Validity</div>
+                    <ul class="features"><li>MAX AI + Jarvis AI</li><li>Ultimate Automation</li><li>GPT + Smart Home</li><li>Lifetime Access</li></ul>
+                    <a href="#order" class="btn btn-primary buy-btn" data-app="MAX + Jarvis" data-price="₹899">Buy Now →</a>
+                </div>
+                <div class="app-card reveal">
+                    <span class="combo-badge">🔥 Combo</span>
+                    <div class="icon">🤖🧩</div>
+                    <h3>Zara + Jarvis</h3>
+                    <div class="price">₹999</div>
+                    <div class="validity">✅ Lifetime Validity</div>
+                    <ul class="features"><li>Zara AI + Jarvis AI</li><li>Best Value Combo</li><li>Chat + Commands</li><li>Lifetime Access</li></ul>
+                    <a href="#order" class="btn btn-primary buy-btn" data-app="Zara + Jarvis" data-price="₹999">Buy Now →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>⚡ Full Phone Automation</h2>
+                <p>ये AI Assistants आपके पूरे फोन को हैंडल करते हैं – WhatsApp, Calls, Apps, सब कुछ!</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Zara Assistant</h3>
+                    <div class="feature-tagline">Complete Phone Control</div>
+                    <ul class="feature-list">
+                        <li>📱 <strong>WhatsApp</strong> – Auto Read &amp; Reply <span class="badge">AI</span></li>
+                        <li>📞 <strong>Call Management</strong> – Pick / Reject / Dial</li>
+                        <li>⚙️ <strong>Full System</strong> – Open Apps, Set Reminders</li>
+                        <li>🧠 <strong>Smart AI Chat</strong> – Real-time assistance</li>
+                        <li>🔊 <strong>Voice Commands</strong> – Hands-free control</li>
+                    </ul>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">⚡</div>
+                    <h3>MAX Assistant</h3>
+                    <div class="feature-tagline">Ultimate AI Powerhouse</div>
+                    <ul class="feature-list">
+                        <li>📱 <strong>WhatsApp</strong> – Auto Read &amp; Reply <span class="badge">GPT</span></li>
+                        <li>📞 <strong>Call Management</strong> – Pick / Reject / Dial</li>
+                        <li>🖼️ <strong>Image AI</strong> – Generate &amp; Edit Images</li>
+                        <li>🗣️ <strong>Voice AI</strong> – Natural conversation</li>
+                        <li>🧠 <strong>GPT-4 Level</strong> – Advanced reasoning</li>
+                    </ul>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🧩</div>
+                    <h3>Jarvis Assistant</h3>
+                    <div class="feature-tagline">Your Digital Butler</div>
+                    <ul class="feature-list">
+                        <li>📱 <strong>WhatsApp</strong> – Auto Read &amp; Reply <span class="badge">Smart</span></li>
+                        <li>📞 <strong>Call Management</strong> – Pick / Reject / Dial</li>
+                        <li>🏠 <strong>Smart Home</strong> – Control IoT devices</li>
+                        <li>📅 <strong>Daily Schedule</strong> – Manage tasks &amp; events</li>
+                        <li>🔊 <strong>Voice Commands</strong> – Seamless interaction</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ORDER ===== -->
+    <section class="section" id="order">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Complete Your Order</h2>
+                <p>Scan the QR code or use UPI ID to pay, then paste your UTR number below.</p>
+            </div>
+            <div id="order-form" class="reveal">
+                <div class="qr-wrapper">
+                    <div class="qr-label">
+                        📱 Scan to Pay
+                        <span class="badge" id="qrBadge">Zara Assistant · ₹699</span>
+                    </div>
+                    <img id="qrImage" src="" alt="UPI QR Code" loading="lazy" width="220" height="220" />
+                    <div class="upi-box">
+                        <span class="upi-label">💳 UPI ID</span>
+                        <span class="upi-id" id="upiIdDisplay" title="Click to copy" onclick="copyUPI()">7991163709@kotakbank</span>
+                        <button class="upi-copy-btn" onclick="copyUPI()">📋 Copy</button>
+                        <a href="#" id="upiPayLink" class="upi-open-btn" target="_blank">🔓 Pay ₹699 Now</a>
+                    </div>
+                    <div class="qr-sub"><strong id="qrPriceDisplay">₹699</strong> · Lifetime License · Secure Payment</div>
+                    <div class="qr-disclaimer">✅ QR scan करने पर सीधा PhonePe / GPay / Paytm / BHIM खुलेगा</div>
+                </div>
+                <div class="order-divider">⬇️ AFTER PAYMENT, FILL BELOW ⬇️</div>
+                <form id="orderForm" novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullName" placeholder="e.g. Rahul Sharma" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" placeholder="you@example.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp Number <span class="required">*</span></label>
+                        <input type="tel" id="whatsapp" placeholder="+91 98765 43210" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="selectedApp">Selected App / Combo <span class="required">*</span></label>
+                        <select id="selectedApp" required>
+                            <option value="Zara Assistant">Zara Assistant — ₹699</option>
+                            <option value="MAX Assistant">MAX Assistant — ₹599</option>
+                            <option value="Jarvis Assistant">Jarvis Assistant — ₹399</option>
+                            <option value="Zara + MAX">🔥 Zara + MAX — ₹1,099</option>
+                            <option value="MAX + Jarvis">🔥 MAX + Jarvis — ₹899</option>
+                            <option value="Zara + Jarvis">🔥 Zara + Jarvis — ₹999</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="utr">UTR / Transaction ID <span class="required">*</span></label>
+                        <input type="text" id="utr" placeholder="e.g. KOM123456789" required />
+                        <div class="utr-hint">
+                            <span>💡</span>
+                            <span>After payment, <strong class="copy-hint">copy</strong> the UTR number from your bank/UPI app and paste it here.</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit" id="orderSubmitBtn">📩 Submit &amp; Verify via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SUPPORT ===== -->
+    <section class="section" id="support">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Customer Support</h2>
+                <p>Reach out to us anytime — we're here to help.</p>
+            </div>
+            <div class="contact-grid reveal">
+                <div class="contact-card">
+                    <div class="emoji">✈️</div>
+                    <h4>Telegram</h4>
+                    <p><a href="https://t.me/DRACOMOD1" target="_blank" rel="noopener">@DRACOMOD1</a></p>
+                </div>
+                <div class="contact-card">
+                    <div class="emoji">✉️</div>
+                    <h4>Email</h4>
+                    <p><a href="mailto:opgaming55b@gmail.com">opgaming55b@gmail.com</a></p>
+                </div>
+                <div class="contact-card hidden-support" id="supportWhatsApp">
+                    <div class="emoji">📱</div>
+                    <h4>WhatsApp (Verification)</h4>
+                    <p><a href="https://wa.me/9871484409" target="_blank" rel="noopener">+91 9871484409</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know before buying.</p>
+            </div>
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">What is AI Store? <span class="arrow">▾</span></button>
+                    <div class="faq-answer">AI Store is India's premium platform for lifetime AI assistants. We offer Zara, MAX, and Jarvis — each packed with advanced AI capabilities.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">How do I pay and get my license key? <span class="arrow">▾</span></button>
+                    <div class="faq-answer">Click "Buy Now" on any app, scan the QR code (which opens UPI app directly) or use the UPI ID. After payment, paste the UTR and submit – we'll verify & send your license key on WhatsApp.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">Is the license really lifetime? <span class="arrow">▾</span></button>
+                    <div class="faq-answer">Yes! All our assistants come with a lifetime license — no recurring fees.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">Which UPI apps are supported? <span class="arrow">▾</span></button>
+                    <div class="faq-answer">PhonePe, Google Pay, Paytm, BHIM, and all other UPI apps. The QR code is a standard UPI deep link.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRIVACY & TERMS ===== -->
+    <section class="section" id="privacy">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Privacy Policy</h2>
+                <p>Your data is safe with us.</p>
+            </div>
+            <div style="max-width:760px;margin:0 auto;background:var(--glass-bg);backdrop-filter:blur(12px);border:1px solid var(--glass-border);border-radius:var(--radius);padding:32px 28px;color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.8;">
+                <p><strong>AI Store</strong> respects your privacy. We collect only the information you provide via the order form to process your order.</p>
+                <p style="margin-top:12px;">We do <strong>not</strong> share, sell, or rent your personal data to third parties.</p>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="terms">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Terms &amp; Conditions</h2>
+                <p>Please read carefully before purchasing.</p>
+            </div>
+            <div style="max-width:760px;margin:0 auto;background:var(--glass-bg);backdrop-filter:blur(12px);border:1px solid var(--glass-border);border-radius:var(--radius);padding:32px 28px;color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.8;">
+                <p>By purchasing any AI Assistant from <strong>AI Store</strong>, you agree to the following terms:</p>
+                <ul style="list-style:disc;padding-left:24px;margin:12px 0;">
+                    <li>All sales are final. Since we deliver digital license keys, no refunds are issued after the key is sent.</li>
+                    <li>License keys are for <strong>single-user</strong> use only.</li>
+                    <li>We reserve the right to suspend access if we detect fraudulent activity.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#apps">Apps</a>
+                <a href="#features">Features</a>
+                <a href="#order">Buy</a>
+                <a href="#support">Support</a>
+                <a href="#faq">FAQ</a>
+                <a href="#privacy">Privacy</a>
+                <a href="#terms">Terms</a>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://instagram.com/rdxgamer102" target="_blank" rel="noopener" class="social-link instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5"/>
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                    @rdxgamer102
+                </a>
+                <a href="https://t.me/DRACOMOD1" target="_blank" rel="noopener" class="social-link telegram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21.5 4.5L2 12l7 4 11-9-2 13-9-7"/>
+                    </svg>
+                    @DRACOMOD1
+                </a>
+                <a href="https://wa.me/9871484409" target="_blank" rel="noopener" class="social-link whatsapp hidden-support" id="footerWhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                    </svg>
+                    +91 9871484409
+                </a>
+            </div>
+
+            <div class="footer-copy">
+                © 2026 AI Store &bull; All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING BUTTONS ===== -->
+    <div class="float-buttons">
+        <a href="https://wa.me/9871484409" target="_blank" rel="noopener" class="float-btn whatsapp hidden-support" id="floatWhatsApp" aria-label="Chat on WhatsApp">💬</a>
+        <a href="https://t.me/DRACOMOD1" target="_blank" rel="noopener" class="float-btn telegram" aria-label="Chat on Telegram">✈️</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
